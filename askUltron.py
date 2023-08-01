@@ -48,6 +48,10 @@ def askUltron(question):
 while True:
     inputText=audioTotext()
     print(inputText)
+    if inputText.lower() in ["stop","exit"]:
+        print("Exiting...")
+        break
     outputText=askUltron(inputText)
     print(outputText)
     speak(outputText)
+    print("Say Exit or Stop to Exit the loop")
